@@ -1,0 +1,30 @@
+[
+    { "name": "Joe's Diner", "portion": "Generous", "flavor": "EWWW Disgusting" },
+    { "name": "Taco Hut", "portion": "Fair", "flavor": "It's just Ok" },
+    { "name": "Pizza Place", "portion": "Stingy", "flavor": "Yummy Delicious" },
+    { "name": "Burger Joint", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Sushi Spot", "portion": "Fair", "flavor": "EWWW Disgusting" },
+    { "name": "Pasta Palace", "portion": "Stingy", "flavor": "It's just Ok" },
+    { "name": "Salad Bar", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Steak House", "portion": "Fair", "flavor": "EWWW Disgusting" },
+    { "name": "Dessert Shop", "portion": "Stingy", "flavor": "It's just Ok" }
+    , { "name": "BBQ Grill", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Seafood Shack", "portion": "Fair", "flavor": "EWWW Disgusting" },
+    { "name": "Breakfast Cafe", "portion": "Stingy", "flavor": "It's just Ok" },
+    { "name": "Vegan Bistro", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Food Truck", "portion": "Fair", "flavor": "EWWW Disgusting" }
+    , { "name": "Ice Cream Parlor", "portion": "Stingy", "flavor": "It's just Ok" },
+    { "name": "Wine Bar", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Coffee Shop", "portion": "Fair", "flavor": "EWWW Disgusting" },
+    { "name": "Bakery", "portion": "Stingy", "flavor": "It's just Ok" }
+    , { "name": "Deli", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Curry House", "portion": "Fair", "flavor": "EWWW Disgusting" },
+    { "name": "Noodle Bar", "portion": "Stingy", "flavor": "It's just Ok" }
+    , { "name": "Grill House", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Pancake Place", "portion": "Fair", "flavor": "EWWW Disgusting" },
+    { "name": "Wrap Shack", "portion": "Stingy", "flavor": "It's just Ok" }
+    , { "name": "Taco Truck", "portion": "Generous", "flavor": "Yummy Delicious" },
+    { "name": "Sushi Bar", "portion": "Fair", "flavor": "EWWW Disgusting" },
+    { "name": "Pasta House", "portion": "Stingy", "flavor": "It's just Ok" }
+   
+  ]
