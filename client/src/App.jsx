@@ -51,10 +51,10 @@ function App() {
         <label>
           Flavor Rating:
           <select onChange={(e) => filterByFlavor(e.target.value)}>
-            <option value="">All</option>
-            <option value="EWWW Disgusting">1 Star</option>
-            <option value="It's just Ok">2 Stars</option>
-            <option value="Yummy Delicious">3 Stars</option>
+          <option value="">All</option>
+          <option value="1">EWWW Disgusting</option>
+          <option value="2">It's just Ok</option>
+          <option value="3">Yummy Delicious</option>
           </select>
         </label>
       </div>
