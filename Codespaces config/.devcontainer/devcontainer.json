@@ -1,5 +1,5 @@
 {
-    "name": "Portion Flavor React App",
+    "name": "Portion Flavor Mvp Minimal",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
     "customizations": {
       "vscode": {
@@ -9,7 +9,7 @@
         ]
       }
     },
-    "postCreateCommand": "cd client && npm install && cd ../server && npm install",
+    "postCreateCommand": "npm run install-all",
     "portsAttributes": {
       "3000": { "label": "Backend", "onAutoForward": "openPreview" },
       "3001": { "label": "Frontend", "onAutoForward": "openBrowser" }

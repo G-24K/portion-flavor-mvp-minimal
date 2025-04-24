@@ -1,4 +1,4 @@
-# portion-flavor-mvp-minimal App
+# portion-flavor-mvp-minimal 
 
 A simple app to filter restaurants by portion size and flavor, built with React and Express.
 
