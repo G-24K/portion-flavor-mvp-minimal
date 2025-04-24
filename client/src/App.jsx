@@ -10,6 +10,7 @@ function App() {
     fetch('http://localhost:3000/restaurants')
       .then(res => res.json())
       .then(data => {
+        console.log('Fetched data:', data); //Debug
         setRestaurants(data);
         setFilteredRestaurants(data);
       })
