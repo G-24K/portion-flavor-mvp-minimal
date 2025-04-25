@@ -5,8 +5,10 @@ function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
+    setLoading(true); // Set loading to true when fetch starts
     fetch('https://glorious-space-waddle-7v76jrwjgpp93rjq5-3000.app.github.dev/restaurants')
       .then(res => {
         console.log('Fetch response status:', res.status);
@@ -28,7 +30,8 @@ function App() {
       .catch(err => {
         console.error('Fetch error:', err);
         setError('Failed to load restaurants: ' + err.message);
-      });
+      })
+      .finally(() => setLoading(false)); // Set loading to false when fetch completes (success or failure)
   }, []);
 
   const filterByPortion = (portion) => {
@@ -50,38 +53,44 @@ function App() {
   return (
     <div className="App">
       <h1>Portion & Flavor App</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div className="filters">
-        <label>
-          Portion Size:
-          <select onChange={(e) => filterByPortion(e.target.value)} disabled={restaurants.length === 0}>
-            <option value="">Select</option>
-            <option value="Stingy">Stingy</option>
-            <option value="Fair">Fair</option>
-            <option value="Generous">Generous</option>
-          </select>
-        </label>
-        <label>
-          Flavor Rating:
-          <select onChange={(e) => filterByFlavor(e.target.value)} disabled={restaurants.length === 0}>
-            <option value="">Select</option>
-            <option value="EWWW Disgusting">EWWW Disgusting</option>
-            <option value="It's just Ok">It's just Ok</option>
-            <option value="Yummy Delicious">Yummy Delicious</option>
-          </select>
-        </label>
-      </div>
-      <ul className="restaurant-list">
-        {filteredRestaurants.length > 0 ? (
-          filteredRestaurants.map((r, i) => (
-            <li key={i}>
-              {r.name} - Portion: {r.portion}, Flavor: {r.flavor}
-            </li>
-          ))
-        ) : (
-          <p>No restaurants to display.</p>
-        )}
-      </ul>
+      {loading ? ( // Show loading message while fetching
+        <p>Loading...</p>
+      ) : (
+        <>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          <div className="filters">
+            <label>
+              Portion Size:
+              <select onChange={(e) => filterByPortion(e.target.value)} disabled={restaurants.length === 0}>
+                <option value="">Select</option>
+                <option value="Stingy">Stingy</option>
+                <option value="Fair">Fair</option>
+                <option value="Generous">Generous</option>
+              </select>
+            </label>
+            <label>
+              Flavor Rating:
+              <select onChange={(e) => filterByFlavor(e.target.value)} disabled={restaurants.length === 0}>
+                <option value="">Select</option>
+                <option value="EWWW Disgusting">EWWW Disgusting</option>
+                <option value="It's just Ok">It's just Ok</option>
+                <option value="Yummy Delicious">Yummy Delicious</option>
+              </select>
+            </label>
+          </div>
+          <ul className="restaurant-list">
+            {filteredRestaurants.length > 0 ? (
+              filteredRestaurants.map((r, i) => (
+                <li key={i}>
+                  {r.name} - Portion: {r.portion}, Flavor: {r.flavor}
+                </li>
+              ))
+            ) : (
+              <p>No restaurants to display.</p>
+            )}
+          </ul>
+        </>
+      )}
     </div>
   );
 }
