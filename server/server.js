@@ -1,7 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const restaurants = require('./restaurants.json');
+let restaurants;
+
+try {
+  restaurants = require('./restaurants.json');
+} catch (err) {
+  console.error('Error loading restaurants.json:', err);
+  process.exit(1); // Exit if the file fails to load
+}
 
 app.use(cors());
 app.use(express.json());

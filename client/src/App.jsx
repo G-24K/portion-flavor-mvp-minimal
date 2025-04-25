@@ -7,7 +7,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/restaurants')
+    fetch('https://glorious-space-waddle-7v76jrwjgpp93rjq5-3000.app.github.dev/')
       .then(res => res.json())
       .then(data => {
         console.log('Fetched data:', data); //Debug
@@ -43,16 +43,16 @@ function App() {
         <label>
           Portion Size:
           <select onChange={(e) => filterByPortion(e.target.value)}>
-            <option value="">All</option>
-            <option value="Stingy">Small</option>
-            <option value="Fair">Medium</option>
-            <option value="Generous">Large</option>
+            <option value="">Select</option>
+            <option value="Stingy">Stingy</option>
+            <option value="Fair">Fair</option>
+            <option value="Generous">Generous</option>
           </select>
         </label>
         <label>
           Flavor Rating:
           <select onChange={(e) => filterByFlavor(e.target.value)}>
-          <option value="">All</option>
+          <option value="">Select</option>
           <option value="1">EWWW Disgusting</option>
           <option value="2">It's just Ok</option>
           <option value="3">Yummy Delicious</option>
@@ -65,7 +65,7 @@ function App() {
         <ul className="restaurant-list">
           {filteredRestaurants.map((r, i) => (
             <li key={i}>
-              {r.name} - Portion: {r.portion}, Flavor: {r.flavor} stars
+              {r.name} - Portion: {r.portion}, Flavor: {r.flavor}
             </li>
           ))}
         </ul>

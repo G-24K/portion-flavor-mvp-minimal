@@ -11,7 +11,7 @@
     },
     "postCreateCommand": "npm run install-all",
     "portsAttributes": {
-      "3000": { "label": "Backend", "onAutoForward": "openPreview" },
+      "3000": { "label": "Backend", "onAutoForward": "notify" },
       "3001": { "label": "Frontend", "onAutoForward": "openBrowser" }
     },
     "forwardPorts": [3000, 3001]
