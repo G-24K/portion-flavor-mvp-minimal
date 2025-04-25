@@ -11,6 +11,13 @@ try {
   process.exit(1);
 }
 
+// Configure CORS to allow requests from the frontend
+app.use(cors({
+  origin: 'https://glorious-space-waddle-7v76jrwjgpp93rjq5-3001.app.github.dev',
+  methods: ['GET'], // Allow only GET requests
+  allowedHeaders: ['Content-Type'],
+}));
+
 app.get('/restaurants', (req, res) => {
   console.log('Received request for /restaurants');
   res.json(restaurants);
@@ -21,9 +28,6 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the Portion & Flavor API' });
 });
 
-app.use(cors({
-  origin: 'https://glorious-space-waddle-7v76jrwjgpp93rjq5-3001.app.github.dev',
-}));
 app.use(express.json());
 
 app.use((req, res) => {
