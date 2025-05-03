@@ -1,29 +1,569 @@
 [
-  { "name": "Joe's Diner", "portion": "Generous", "flavor": "EWWW Disgusting" },
-  { "name": "Taco Hut", "portion": "Fair", "flavor": "It's just Ok" },
-  { "name": "Pizza Place", "portion": "Stingy", "flavor": "Yummy Delicious" },
-  { "name": "Burger Joint", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Sushi Spot", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Pasta Palace", "portion": "Stingy", "flavor": "It's just Ok" },
-  { "name": "Salad Bar", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Steak House", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Dessert Shop", "portion": "Stingy", "flavor": "It's just Ok" },
-  { "name": "BBQ Grill", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Seafood Shack", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Breakfast Cafe", "portion": "Stingy", "flavor": "It's just Ok" },
-  { "name": "Vegan Bistro", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Food Truck", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Ice Cream Parlor", "portion": "Stingy", "flavor": "It's just Ok" },
-  { "name": "Wine Bar", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Coffee Shop", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Bakery", "portion": "Stingy", "flavor": "It's just Ok" },
-  { "name": "Deli", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Curry House", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Noodle Bar", "portion": "Stingy", "flavor": "It's just Ok" },
-  { "name": "Grill House", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Pancake Place", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Wrap Shack", "portion": "Stingy", "flavor": "It's just Ok" },
-  { "name": "Taco Truck", "portion": "Generous", "flavor": "Yummy Delicious" },
-  { "name": "Sushi Bar", "portion": "Fair", "flavor": "EWWW Disgusting" },
-  { "name": "Pasta House", "portion": "Stingy", "flavor": "It's just Ok" }
+  {
+    "id": 1,
+    "name": "Nobu Malibu",
+    "address": "22706 Pacific Coast Hwy, Malibu, CA 90265",
+    "portion": "Generous",
+    "flavor": "EWWW Disgusting",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 1000,
+      "sum_taste": 1000,
+      "sum_portion": 3000,
+      "sum_service": 2800,
+      "sum_eat_again": 2000,
+      "sum_order_again": 1800,
+      "samples": [
+        {"taste": 1, "portion": 3, "service": 3, "eat_again": 2, "order_again": 2},
+        {"taste": 1, "portion": 3, "service": 3, "eat_again": 3, "order_again": 1},
+        {"taste": 1, "portion": 3, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Gjelina",
+    "address": "1429 Abbot Kinney Blvd, Venice, CA 90291",
+    "portion": "Fair",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 900,
+      "sum_taste": 1800,
+      "sum_portion": 1800,
+      "sum_service": 1800,
+      "sum_eat_again": 1900,
+      "sum_order_again": 1700,
+      "samples": [
+        {"taste": 2, "portion": 2, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 2, "service": 2, "eat_again": 3, "order_again": 1},
+        {"taste": 2, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Pizzeria Mozza",
+    "address": "641 N Highland Ave, Los Angeles, CA 90036",
+    "portion": "Stingy",
+    "flavor": "Yummy Delicious",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 850,
+      "sum_taste": 2550,
+      "sum_portion": 850,
+      "sum_service": 1700,
+      "sum_eat_again": 2000,
+      "sum_order_again": 2100,
+      "samples": [
+        {"taste": 3, "portion": 1, "service": 2, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 1, "service": 2, "eat_again": 1, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Spago",
+    "address": "176 N Canon Dr, Beverly Hills, CA 90210",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 800,
+      "sum_taste": 2400,
+      "sum_portion": 2400,
+      "sum_service": 2300,
+      "sum_eat_again": 2000,
+      "sum_order_again": 2100,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "name": "Sugarfish",
+    "address": "600 W 7th St, Los Angeles, CA 90017",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 800,
+      "sum_taste": 800,
+      "sum_portion": 1600,
+      "sum_service": 1600,
+      "sum_eat_again": 1200,
+      "sum_order_again": 1100,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "name": "Petit Trois",
+    "address": "718 N Highland Ave, Los Angeles, CA 90038",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 600,
+      "sum_taste": 1200,
+      "sum_portion": 600,
+      "sum_service": 1200,
+      "sum_eat_again": 1100,
+      "sum_order_again": 1000,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "name": "The Ivy",
+    "address": "113 N Robertson Blvd, Los Angeles, CA 90048",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 500,
+      "sum_taste": 1500,
+      "sum_portion": 1500,
+      "sum_service": 1400,
+      "sum_eat_again": 1300,
+      "sum_order_again": 1350,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "name": "Cut by Wolfgang Puck",
+    "address": "9500 Wilshire Blvd, Beverly Hills, CA 90212",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 450,
+      "sum_taste": 450,
+      "sum_portion": 900,
+      "sum_service": 1250,
+      "sum_eat_again": 700,
+      "sum_order_again": 650,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 3, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 3, "eat_again": 2, "order_again": 2},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1}
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "name": "Porto’s Bakery",
+    "address": "315 N Brand Blvd, Glendale, CA 91203",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 400,
+      "sum_taste": 800,
+      "sum_portion": 400,
+      "sum_service": 800,
+      "sum_eat_again": 750,
+      "sum_order_again": 700,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "name": "Moo’s Craft Barbecue",
+    "address": "2118 N Broadway, Los Angeles, CA 90031",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 400,
+      "sum_taste": 1200,
+      "sum_portion": 1200,
+      "sum_service": 800,
+      "sum_eat_again": 1000,
+      "sum_order_again": 1050,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "name": "Providence",
+    "address": "5955 Melrose Ave, Los Angeles, CA 90038",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 350,
+      "sum_taste": 350,
+      "sum_portion": 700,
+      "sum_service": 950,
+      "sum_eat_again": 550,
+      "sum_order_again": 500,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 3, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 3, "eat_again": 2, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "name": "Bottega Louie",
+    "address": "700 S Grand Ave, Los Angeles, CA 90017",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 350,
+      "sum_taste": 700,
+      "sum_portion": 350,
+      "sum_service": 700,
+      "sum_eat_again": 650,
+      "sum_order_again": 600,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "name": "Kato",
+    "address": "1190 Mission St, Los Angeles, CA 90033",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 300,
+      "sum_taste": 900,
+      "sum_portion": 900,
+      "sum_service": 850,
+      "sum_eat_again": 750,
+      "sum_order_again": 800,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "name": "Din Tai Fung",
+    "address": "1108 S Baldwin Ave, Arcadia, CA 91007",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 300,
+      "sum_taste": 300,
+      "sum_portion": 600,
+      "sum_service": 600,
+      "sum_eat_again": 450,
+      "sum_order_again": 400,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "name": "The Original Pantry Cafe",
+    "address": "877 S Figueroa St, Los Angeles, CA 90017",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 300,
+      "sum_taste": 600,
+      "sum_portion": 300,
+      "sum_service": 600,
+      "sum_eat_again": 550,
+      "sum_order_again": 500,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "name": "Gwen",
+    "address": "6600 Melrose Ave, Los Angeles, CA 90038",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 250,
+      "sum_taste": 750,
+      "sum_portion": 750,
+      "sum_service": 700,
+      "sum_eat_again": 650,
+      "sum_order_again": 675,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "name": "Cafe Gratitude",
+    "address": "639 N Larchmont Blvd, Los Angeles, CA 90004",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 250,
+      "sum_taste": 250,
+      "sum_portion": 500,
+      "sum_service": 500,
+      "sum_eat_again": 350,
+      "sum_order_again": 300,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "name": "Republique",
+    "address": "624 S La Brea Ave, Los Angeles, CA 90036",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 250,
+      "sum_taste": 500,
+      "sum_portion": 250,
+      "sum_service": 500,
+      "sum_eat_again": 450,
+      "sum_order_again": 400,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "name": "Musso & Frank Grill",
+    "address": "6667 Hollywood Blvd, Los Angeles, CA 90028",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 200,
+      "sum_taste": 600,
+      "sum_portion": 600,
+      "sum_service": 550,
+      "sum_eat_again": 500,
+      "sum_order_again": 525,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "name": "Holbox",
+    "address": "3655 S Grand Ave, Los Angeles, CA 90007",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 200,
+      "sum_taste": 200,
+      "sum_portion": 400,
+      "sum_service": 400,
+      "sum_eat_again": 300,
+      "sum_order_again": 250,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "name": "Yangban Society",
+    "address": "712 S Santa Fe Ave, Los Angeles, CA 90021",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 200,
+      "sum_taste": 400,
+      "sum_portion": 200,
+      "sum_service": 400,
+      "sum_eat_again": 350,
+      "sum_order_again": 300,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "name": "Matisse",
+    "address": "108 W 3rd St, Los Angeles, CA 90013",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Exceptional",
+    "ratings": {
+      "total_reviews": 150,
+      "sum_taste": 450,
+      "sum_portion": 450,
+      "sum_service": 400,
+      "sum_eat_again": 375,
+      "sum_order_again": 400,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "name": "Bestia",
+    "address": "2121 E 7th Pl, Los Angeles, CA 90021",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 150,
+      "sum_taste": 150,
+      "sum_portion": 300,
+      "sum_service": 300,
+      "sum_eat_again": 225,
+      "sum_order_again": 200,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "name": "Angelini Osteria",
+    "address": "7313 Beverly Blvd, Los Angeles, CA 90036",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 150,
+      "sum_taste": 300,
+      "sum_portion": 150,
+      "sum_service": 300,
+      "sum_eat_again": 275,
+      "sum_order_again": 250,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "name": "Guisados",
+    "address": "2100 E Cesar E Chavez Ave, Los Angeles, CA 90033",
+    "portion": "Generous",
+    "flavor": "Yummy Delicious",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 100,
+      "sum_taste": 300,
+      "sum_portion": 300,
+      "sum_service": 200,
+      "sum_eat_again": 250,
+      "sum_order_again": 275,
+      "samples": [
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "name": "Sushi Gen",
+    "address": "422 E 2nd St, Los Angeles, CA 90012",
+    "portion": "Fair",
+    "flavor": "EWWW Disgusting",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 100,
+      "sum_taste": 100,
+      "sum_portion": 200,
+      "sum_service": 200,
+      "sum_eat_again": 150,
+      "sum_order_again": 125,
+      "samples": [
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
+        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "name": "Rossoblu",
+    "address": "1124 San Julian St, Los Angeles, CA 90015",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
+    "service": "Good",
+    "ratings": {
+      "total_reviews": 100,
+      "sum_taste": 200,
+      "sum_portion": 100,
+      "sum_service": 200,
+      "sum_eat_again": 175,
+      "sum_order_again": 150,
+      "samples": [
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
+        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+      ]
+    }
+  }
 ]

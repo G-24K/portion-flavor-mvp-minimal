@@ -1,7 +1,9 @@
 .App {
   max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -16,23 +18,56 @@ h1 {
   margin-bottom: 20px;
 }
 
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.controls button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
 .filters {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-label {
+.portion-label {
   font-weight: bold;
-  color: #0f0f0f; 
+  color: #2c5282;
+}
+
+.flavor-label {
+  font-weight: bold;
+  color: #742a2a;
+}
+
+.service-label {
+  font-weight: bold;
+  color: #2f855a;
 }
 
 select {
   margin-left: 10px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #000000;
+  border: 1px solid #ccc;
 }
 
 .restaurant-list {
@@ -46,4 +81,99 @@ select {
   margin: 5px 0;
   border-radius: 5px;
   border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Portion value colors */
+.portion-value.portion-stingy {
+  color: #e53e3e;
+  font-weight: bold;
+}
+
+.portion-value.portion-fair {
+  color: #d69e2e;
+  font-weight: bold;
+}
+
+.portion-value.portion-generous {
+  color: #38a169;
+  font-weight: bold;
+}
+
+/* Flavor value colors */
+.flavor-value.flavor-ewww-disgusting {
+  color: #e53e3e;
+  font-weight: bold;
+}
+
+.flavor-value.flavor-its-just-ok {
+  color: #d69e2e;
+  font-weight: bold;
+}
+
+.flavor-value.flavor-yummy-delicious {
+  color: #38a169;
+  font-weight: bold;
+}
+
+/* Service value colors */
+.service-value.service-terrible {
+  color: #e53e3e;
+  font-weight: bold;
+}
+
+.service-value.service-good {
+  color: #d69e2e;
+  font-weight: bold;
+}
+
+.service-value.service-exceptional {
+  color: #38a169;
+  font-weight: bold;
+}
+
+.restaurant-details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.rating-details {
+  margin-top: 20px;
+}
+
+.rating-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.rating-form label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  select {
+    margin-left: 0;
+    width: 100%;
+    max-width: 300px;
+  }
 }
