@@ -1,25 +1,27 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-// Main App component
+// Main App component for the Portion & Flavor App
 function App() {
-  const [restaurants, setRestaurants] = useState([]); // State for all restaurants
-  const [filteredRestaurants, setFilteredRestaurants] = useState([]); // State for filtered list
-  const [error, setError] = useState(null); // State for error messages
-  const [loading, setLoading] = useState(true); // State for loading indicator
-  const [selectedRestaurant, setSelectedRestaurant] = useState(null); // State for selected restaurant details
-  const [ratingTaste, setRatingTaste] = useState(0); // State for rating taste input
-  const [ratingPortion, setRatingPortion] = useState(0); // State for rating portion input
-  const [ratingService, setRatingService] = useState(0); // State for rating service input
-  const [ratingEatAgain, setRatingEatAgain] = useState(0); // State for eat again rating
-  const [ratingOrderAgain, setRatingOrderAgain] = useState(0); // State for order again rating
-  const [thankYouMessage, setThankYouMessage] = useState(false); // State for thank you message
-  const [searchTerm, setSearchTerm] = useState(''); // State for search term
-  const [portionFilter, setPortionFilter] = useState(''); // State for portion filter
-  const [flavorFilter, setFlavorFilter] = useState(''); // State for flavor filter
-  const [serviceFilter, setServiceFilter] = useState(''); // State for service filter
-  const [sortByRating, setSortByRating] = useState(false); // State for rating sort toggle
-  const [showRatingForm, setShowRatingForm] = useState(false); // State to toggle between details and rating form
+  // State for managing restaurant data, filters, and UI views
+  const [restaurants, setRestaurants] = useState([]); // All restaurants fetched from API
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]); // Filtered list based on user input
+  const [error, setError] = useState(null); // Error message for API failures
+  const [loading, setLoading] = useState(true); // Loading state for API fetch
+  const [selectedRestaurant, setSelectedRestaurant] = useState(null); // Currently selected restaurant for details
+  const [ratingTaste, setRatingTaste] = useState(0); // Rating form: taste (1-3)
+  const [ratingPortion, setRatingPortion] = useState(0); // Rating form: portion (1-3)
+  const [ratingService, setRatingService] = useState(0); // Rating form: service (1-3)
+  const [ratingEatAgain, setRatingEatAgain] = useState(0); // Rating form: eat again (1-3)
+  const [ratingOrderAgain, setRatingOrderAgain] = useState(0); // Rating form: order again (1-3)
+  const [thankYouMessage, setThankYouMessage] = useState(false); // Show thank-you message after rating submission
+  const [searchTerm, setSearchTerm] = useState(''); // Search term for filtering by name
+  const [portionFilter, setPortionFilter] = useState(''); // Filter for portion size
+  const [flavorFilter, setFlavorFilter] = useState(''); // Filter for flavor rating
+  const [serviceFilter, setServiceFilter] = useState(''); // Filter for service rating
+  const [sortByRating, setSortByRating] = useState(false); // Toggle for sorting by average rating
+  const [showRatingForm, setShowRatingForm] = useState(false); // Toggle for rating form view
+  const [showDetails, setShowDetails] = useState(false); // Toggle for restaurant details view
 
   // Fetch restaurants on component mount
   useEffect(() => {
@@ -48,7 +50,7 @@ function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  // Function to calculate average rating percentage (out of 3 for each, total 15 possible)
+  // Calculate average rating for a restaurant based on all rating categories
   const getAverageRating = (ratings) => {
     if (ratings.total_reviews === 0) return 0;
     const avgTaste = ratings.sum_taste / ratings.total_reviews;
@@ -56,47 +58,48 @@ function App() {
     const avgService = ratings.sum_service / ratings.total_reviews;
     const avgEatAgain = ratings.sum_eat_again / ratings.total_reviews;
     const avgOrderAgain = ratings.sum_order_again / ratings.total_reviews;
-    const overallAverage = (avgTaste + avgPortion + avgService + avgEatAgain + avgOrderAgain) / 5; // Average out of 3
-    return (overallAverage / 3) * 100; // Convert to percentage
+    const overallAverage = (avgTaste + avgPortion + avgService + avgEatAgain + avgOrderAgain) / 5;
+    return (overallAverage / 3) * 100; // Convert to percentage (0-100)
   };
 
-  // Function to map numerical taste rating to category for display
+  // Map average taste rating to a category (EWWW Disgusting, It's just Ok, Yummy Delicious)
   const mapTasteToCategory = (avgTaste) => {
     if (avgTaste <= 1.5) return 'EWWW Disgusting';
     if (avgTaste <= 2.5) return "It's just Ok";
     return 'Yummy Delicious';
   };
 
-  // Function to map numerical portion rating to category for display
+  // Map average portion rating to a category (Stingy, Fair, Generous)
   const mapPortionToCategory = (avgPortion) => {
     if (avgPortion <= 1.5) return 'Stingy';
     if (avgPortion <= 2.5) return 'Fair';
     return 'Generous';
   };
 
-  // Function to map numerical service rating to category for display
+  // Map average service rating to a category (Terrible, Good, Exceptional)
   const mapServiceToCategory = (avgService) => {
     if (avgService <= 1.5) return 'Terrible';
     if (avgService <= 2.5) return 'Good';
     return 'Exceptional';
   };
 
-  // Function to map numerical eat again rating to category for display
+  // Map "eat again" rating to a category (No, Maybe, Yes)
   const mapEatAgainToCategory = (avgEatAgain) => {
     if (avgEatAgain <= 1.5) return 'No';
     if (avgEatAgain <= 2.5) return 'Maybe';
     return 'Yes';
   };
 
-  // Function to map numerical order again rating to category for display
+  // Map "order again" rating to a category (No, Maybe, Yes)
   const mapOrderAgainToCategory = (avgOrderAgain) => {
     if (avgOrderAgain <= 1.5) return 'No';
     if (avgOrderAgain <= 2.5) return 'Maybe';
     return 'Yes';
   };
 
-  // Function to submit rating to backend
+  // Submit a new rating for the selected restaurant
   const submitRating = () => {
+    // Validate all ratings are provided and within range (1-3)
     if (!ratingTaste || !ratingPortion || !ratingService || !ratingEatAgain || !ratingOrderAgain ||
         ratingTaste < 1 || ratingTaste > 3 || ratingPortion < 1 || ratingPortion > 3 ||
         ratingService < 1 || ratingService > 3 || ratingEatAgain < 1 || ratingEatAgain > 3 ||
@@ -128,9 +131,9 @@ function App() {
         setThankYouMessage(true);
         setTimeout(() => {
           setThankYouMessage(false);
-          setShowRatingForm(false); // Return to restaurant details after submission
-        }, 3000); // Show thank you for 3 seconds
-        // Refresh restaurant data
+          setShowRatingForm(false);
+        }, 3000); // Show thank-you message for 3 seconds
+        // Refresh restaurant list after submission
         fetch('https://glorious-space-waddle-7v76jrwjgpp93rjq5-3000.app.github.dev/restaurants')
           .then(res => res.json())
           .then(data => {
@@ -138,6 +141,7 @@ function App() {
             setFilteredRestaurants(data);
             setSelectedRestaurant(data.find(r => r.id === selectedRestaurant.id));
           });
+        // Reset rating form
         setRatingTaste(0);
         setRatingPortion(0);
         setRatingService(0);
@@ -150,7 +154,7 @@ function App() {
       });
   };
 
-  // Filter and sort restaurants based on various criteria
+  // Filter and sort restaurants based on user input
   useEffect(() => {
     let filtered = restaurants;
     if (searchTerm) {
@@ -169,13 +173,12 @@ function App() {
       filtered = filtered.sort((a, b) => {
         const aRating = getAverageRating(a.ratings);
         const bRating = getAverageRating(b.ratings);
-        return bRating - aRating;
+        return bRating - aRating; // Sort descending by rating
       });
     }
     setFilteredRestaurants(filtered);
   }, [restaurants, searchTerm, portionFilter, flavorFilter, serviceFilter, sortByRating]);
 
-  // Render the app
   return (
     <div className="App">
       <h1>Portion & Flavor App</h1>
@@ -184,6 +187,7 @@ function App() {
       ) : (
         <>
           {error && <p style={{ color: 'red' }}>{error}</p>}
+          {/* Search bar and sort button */}
           <div className="controls">
             <input
               type="text"
@@ -195,6 +199,7 @@ function App() {
               {sortByRating ? 'Unsort' : 'Sort by Rating'}
             </button>
           </div>
+          {/* Filters for portion, flavor, and service */}
           <div className="filters">
             <label className="portion-label">
               Portion Size:
@@ -224,55 +229,68 @@ function App() {
               </select>
             </label>
           </div>
-          {/* Version 1: Spaced Out Portion, Flavor, Service */}
-          <ul className="restaurant-list">
-            {filteredRestaurants.map((r, i) => (
-              <li key={i} onClick={() => { setSelectedRestaurant(r); setShowRatingForm(false); }} style={{ cursor: 'pointer' }}>
-                {r.name}
-                <br />
-                <br />
-                Rating: {getAverageRating(r.ratings).toFixed(1)}% ({r.ratings.total_reviews} reviews)
-                <br />
-                <br />
-                Portion: <span className={`portion-value portion-${r.portion.toLowerCase().replace(/['\s]/g, '-')}`}>{r.portion}</span>,
-                Flavor: <span className={`flavor-value flavor-${r.flavor.toLowerCase().replace(/['\s]/g, '-')}`}>{r.flavor}</span>,
-                Service: <span className={`service-value service-${r.service.toLowerCase().replace(/['\s]/g, '-')}`}>{r.service}</span>
-              </li>
-            ))}
-          </ul>
+          {/* Conditionally render either the restaurant list or details view */}
+          {!showDetails && !showRatingForm && (
+            <ul className="restaurant-list">
+              {filteredRestaurants.map((r, i) => {
+                const flavorClass = `flavor-value flavor-${r.flavor.toLowerCase().replace(/['\s]/g, '-')}`;
+                // Debug: Log the generated flavor class to troubleshoot bold issue
+                console.log(`Generated flavor class for ${r.flavor}: ${flavorClass}`);
+                return (
+                  <li key={i} onClick={() => {
+                    setSelectedRestaurant(r);
+                    setShowDetails(true); // Show details view on click
+                  }} style={{ cursor: 'pointer' }}>
+                    <div className="restaurant-item">
+                      <div className="rating-section">
+                        <strong style={{ fontSize: '1.5em', fontWeight: 'bold' }}>{r.name}</strong>
+                        <br />
+                        <br />
+                        Rating: {getAverageRating(r.ratings).toFixed(1)}% ({r.ratings.total_reviews} reviews)
+                      </div>
+                      <div className="details-section">
+                        <div>
+                          Portion: <span className={`portion-value portion-${r.portion.toLowerCase().replace(/['\s]/g, '-')}`}>{r.portion}</span>
+                        </div>
+                        <div>
+                          Flavor: <span className={flavorClass}>{r.flavor}</span>
+                        </div>
+                        <div>
+                          Service: <span className={`service-value service-${r.service.toLowerCase().replace(/['\s]/g, '-')}`}>{r.service}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
 
-          {/* Version 2: Rating on Left, Portion/Flavor/Service Stacked on Right (commented out) */}
-          {/*
-          <ul className="restaurant-list">
-            {filteredRestaurants.map((r, i) => (
-              <li key={i} onClick={() => { setSelectedRestaurant(r); setShowRatingForm(false); }} style={{ cursor: 'pointer' }}>
-                <div className="restaurant-item">
-                  <div className="rating-section">
-                    {r.name}
-                    <br />
-                    Rating: {getAverageRating(r.ratings).toFixed(1)}% ({r.ratings.total_reviews} reviews)
-                  </div>
-                  <div className="details-section">
-                    <div>
-                      Portion: <span className={`portion-value portion-${r.portion.toLowerCase().replace(/['\s]/g, '-')}`}>{r.portion}</span>
-                    </div>
-                    <div>
-                      Flavor: <span className={`flavor-value flavor-${r.flavor.toLowerCase().replace(/['\s]/g, '-')}`}>{r.flavor}</span>
-                    </div>
-                    <div>
-                      Service: <span className={`service-value service-${r.service.toLowerCase().replace(/['\s]/g, '-')}`}>{r.service}</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-          */}
-
-          {selectedRestaurant && (
+          {/* Details and rating form views, only render if selectedRestaurant is not null */}
+          {selectedRestaurant && (showDetails || showRatingForm) ? (
             <div className="restaurant-details">
-              {showRatingForm ? (
-                // Rating Form Section
+              {showDetails && !showRatingForm ? (
+                <>
+                  <h2>{selectedRestaurant.name}</h2>
+                  <p>Address: {selectedRestaurant.address}</p>
+                  <button onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRestaurant.address)}`, '_blank')}>
+                    Directions to this place
+                  </button>
+                  <div className="rating-details">
+                    <h3>Average Ratings</h3>
+                    <p>Taste: {mapTasteToCategory(selectedRestaurant.ratings.sum_taste / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Portion: {mapPortionToCategory(selectedRestaurant.ratings.sum_portion / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Service: {mapServiceToCategory(selectedRestaurant.ratings.sum_service / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Eat there again?: {mapEatAgainToCategory(selectedRestaurant.ratings.sum_eat_again / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Order that dish again?: {mapOrderAgainToCategory(selectedRestaurant.ratings.sum_order_again / selectedRestaurant.ratings.total_reviews)}</p>
+                  </div>
+                  <button onClick={() => setShowRatingForm(true)}>Leave a Rating</button>
+                  <button className="back-button" onClick={() => {
+                    setShowDetails(false);
+                    setSelectedRestaurant(null); // Clear selectedRestaurant to remove lingering div
+                  }}>Back to List</button>
+                </>
+              ) : showRatingForm ? (
                 <>
                   <h2>Rate {selectedRestaurant.name}</h2>
                   <div className="rating-form">
@@ -326,27 +344,9 @@ function App() {
                   </div>
                   {thankYouMessage && <p>Thank you for helping everyone!</p>}
                 </>
-              ) : (
-                // Restaurant Details Section
-                <>
-                  <h2>{selectedRestaurant.name}</h2>
-                  <p>Address: {selectedRestaurant.address}</p>
-                  <button onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRestaurant.address)}`, '_blank')}>
-                    Directions to this place
-                  </button>
-                  <div className="rating-details">
-                    <h3>Average Ratings</h3>
-                    <p>Taste: {mapTasteToCategory(selectedRestaurant.ratings.sum_taste / selectedRestaurant.ratings.total_reviews)}</p>
-                    <p>Portion: {mapPortionToCategory(selectedRestaurant.ratings.sum_portion / selectedRestaurant.ratings.total_reviews)}</p>
-                    <p>Service: {mapServiceToCategory(selectedRestaurant.ratings.sum_service / selectedRestaurant.ratings.total_reviews)}</p>
-                    <p>Eat there again?: {mapEatAgainToCategory(selectedRestaurant.ratings.sum_eat_again / selectedRestaurant.ratings.total_reviews)}</p>
-                    <p>Order that dish again?: {mapOrderAgainToCategory(selectedRestaurant.ratings.sum_order_again / selectedRestaurant.ratings.total_reviews)}</p>
-                  </div>
-                  <button onClick={() => setShowRatingForm(true)}>Leave a Rating</button>
-                </>
-              )}
+              ) : null}
             </div>
-          )}
+          ) : null}
         </>
       )}
     </div>

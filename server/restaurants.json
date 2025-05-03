@@ -58,12 +58,12 @@
     "flavor": "It's just Ok",
     "service": "Good",
     "ratings": {
-      "total_reviews": 900,
-      "sum_taste": 1800,
-      "sum_portion": 1800,
-      "sum_service": 1800,
-      "sum_eat_again": 1900,
-      "sum_order_again": 1700,
+      "total_reviews": 901,
+      "sum_taste": 1802,
+      "sum_portion": 1802,
+      "sum_service": 1802,
+      "sum_eat_again": 1902,
+      "sum_order_again": 1702,
       "samples": [
         {
           "taste": 2,
@@ -85,8 +85,20 @@
           "service": 2,
           "eat_again": 1,
           "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
         }
-      ]
+      ],
+      "average_taste": 2,
+      "average_portion": 2,
+      "average_service": 2,
+      "average_eat_again": 2.1109877913429522,
+      "average_order_again": 1.8890122086570478
     }
   },
   {
