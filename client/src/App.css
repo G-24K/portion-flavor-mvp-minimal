@@ -14,7 +14,7 @@
 }
 
 h1 {
-  color: #333;
+  color: #070718;
   margin-bottom: 20px;
 }
 
@@ -30,13 +30,20 @@ h1 {
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 200px;
+  color: #00008B; /* Dark blue text color for the search bar */
+}
+
+/* Placeholder text for visibility */
+.controls input::placeholder {
+  color: #666; /* Placeholder text color */
+  opacity: 1; /* Ensures placeholder is fully visible */
 }
 
 .controls button {
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #f0f0f0;
+  background-color: #ff2929;
   cursor: pointer;
 }
 
@@ -50,17 +57,17 @@ h1 {
 
 .portion-label {
   font-weight: bold;
-  color: #2c5282;
+  color: #000000;
 }
 
 .flavor-label {
   font-weight: bold;
-  color: #742a2a;
+  color: #000000;
 }
 
 .service-label {
   font-weight: bold;
-  color: #2f855a;
+  color: #000000;
 }
 
 select {
@@ -76,7 +83,7 @@ select {
 }
 
 .restaurant-list li {
-  background-color: #0400fc;
+  background-color: #070718;
   padding: 10px;
   margin: 5px 0;
   border-radius: 5px;
@@ -85,58 +92,97 @@ select {
   cursor: pointer;
 }
 
+/* Version 1: Spacing for Portion, Flavor, Service */
+.portion-value,
+.flavor-value,
+.service-value {
+  margin-right: 20px; /* Adds horizontal spacing between the labels */
+}
+
+.service-value {
+  margin-right: 0; /* Removes margin from the last item (Service) */
+}
+
+/* Version 2: Stacked Layout */
+.restaurant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.rating-section {
+  flex: 1;
+  text-align: left;
+}
+
+.details-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+/* Remove the horizontal margin since they’re now stacked vertically */
+.portion-value,
+.flavor-value,
+.service-value {
+  margin-right: 0; /* Reset the margin-right from the first version */
+}
+
 /* Portion value colors */
-.portion-value.portion-stingy {
-  color: #e53e3e;
+.restaurant-list .portion-value.portion-stingy {
+  color: #ffffff;
   font-weight: bold;
 }
 
-.portion-value.portion-fair {
-  color: #d69e2e;
+.restaurant-list .portion-value.portion-fair {
+  color: #ffffff;
   font-weight: bold;
 }
 
-.portion-value.portion-generous {
-  color: #38a169;
+.restaurant-list .portion-value.portion-generous {
+  color: #ffffff;
   font-weight: bold;
 }
 
 /* Flavor value colors */
-.flavor-value.flavor-ewww-disgusting {
-  color: #e53e3e;
+.restaurant-list .flavor-value.flavor-ewww-disgusting {
+  color: #ffffff;
   font-weight: bold;
 }
 
-.flavor-value.flavor-its-just-ok {
-  color: #d69e2e;
+.restaurant-list .flavor-value.flavor-its-just-ok {
+  color: #ffffff;
   font-weight: bold;
 }
 
-.flavor-value.flavor-yummy-delicious {
-  color: #38a169;
+.restaurant-list .flavor-value.flavor-yummy-delicious {
+  color: #ffffff;
   font-weight: bold;
 }
 
 /* Service value colors */
-.service-value.service-terrible {
-  color: #e53e3e;
+.restaurant-list .service-value.service-terrible {
+  color: #ffffff;
   font-weight: bold;
 }
 
-.service-value.service-good {
-  color: #d69e2e;
+.restaurant-list .service-value.service-good {
+  color: #fdfdfc;
   font-weight: bold;
 }
 
-.service-value.service-exceptional {
-  color: #38a169;
+.restaurant-list .service-value.service-exceptional {
+  color: #fbfcfb;
   font-weight: bold;
 }
 
 .restaurant-details {
   margin-top: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #070718;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
@@ -159,6 +205,22 @@ select {
   align-items: center;
 }
 
+/* Style for buttons in the restaurant-details section */
+.restaurant-details button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #ff2929; /* Matches the color scheme of other buttons */
+  color: #ffffff; /* White text for contrast */
+  cursor: pointer;
+}
+
+/* Adjust button spacing in the rating form */
+.rating-form button {
+  margin-top: 10px;
+}
+
 /* Adjust for mobile devices */
 @media (max-width: 600px) {
   .App {
@@ -175,5 +237,15 @@ select {
     margin-left: 0;
     width: 100%;
     max-width: 300px;
+  }
+
+  .restaurant-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details-section {
+    align-items: flex-start;
+    margin-top: 10px;
   }
 }

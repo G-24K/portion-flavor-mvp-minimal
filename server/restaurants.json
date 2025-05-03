@@ -3,21 +3,51 @@
     "id": 1,
     "name": "Nobu Malibu",
     "address": "22706 Pacific Coast Hwy, Malibu, CA 90265",
-    "portion": "Generous",
-    "flavor": "EWWW Disgusting",
+    "portion": "Stingy",
+    "flavor": "It's just Ok",
     "service": "Exceptional",
     "ratings": {
-      "total_reviews": 1000,
-      "sum_taste": 1000,
-      "sum_portion": 3000,
-      "sum_service": 2800,
-      "sum_eat_again": 2000,
-      "sum_order_again": 1800,
+      "total_reviews": 1001,
+      "sum_taste": 1003,
+      "sum_portion": 3001,
+      "sum_service": 2803,
+      "sum_eat_again": 2003,
+      "sum_order_again": 1802,
       "samples": [
-        {"taste": 1, "portion": 3, "service": 3, "eat_again": 2, "order_again": 2},
-        {"taste": 1, "portion": 3, "service": 3, "eat_again": 3, "order_again": 1},
-        {"taste": 1, "portion": 3, "service": 2, "eat_again": 1, "order_again": 2}
-      ]
+        {
+          "taste": 1,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 1,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 1,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 2
+        }
+      ],
+      "average_taste": 1.001998001998002,
+      "average_portion": 2.998001998001998,
+      "average_service": 2.8001998001998003,
+      "average_eat_again": 2.000999000999001,
+      "average_order_again": 1.8001998001998003
     }
   },
   {
@@ -35,9 +65,27 @@
       "sum_eat_again": 1900,
       "sum_order_again": 1700,
       "samples": [
-        {"taste": 2, "portion": 2, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 2, "service": 2, "eat_again": 3, "order_again": 1},
-        {"taste": 2, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -56,9 +104,27 @@
       "sum_eat_again": 2000,
       "sum_order_again": 2100,
       "samples": [
-        {"taste": 3, "portion": 1, "service": 2, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 1, "service": 2, "eat_again": 1, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -77,9 +143,27 @@
       "sum_eat_again": 2000,
       "sum_order_again": 2100,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -98,9 +182,27 @@
       "sum_eat_again": 1200,
       "sum_order_again": 1100,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -119,9 +221,27 @@
       "sum_eat_again": 1100,
       "sum_order_again": 1000,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -140,9 +260,27 @@
       "sum_eat_again": 1300,
       "sum_order_again": 1350,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -161,9 +299,27 @@
       "sum_eat_again": 700,
       "sum_order_again": 650,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 3, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 3, "eat_again": 2, "order_again": 2},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 3,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 3,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        }
       ]
     }
   },
@@ -182,9 +338,27 @@
       "sum_eat_again": 750,
       "sum_order_again": 700,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -203,9 +377,27 @@
       "sum_eat_again": 1000,
       "sum_order_again": 1050,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -224,9 +416,27 @@
       "sum_eat_again": 550,
       "sum_order_again": 500,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 3, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 3, "eat_again": 2, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 3,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 3,
+          "eat_again": 2,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -245,9 +455,27 @@
       "sum_eat_again": 650,
       "sum_order_again": 600,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -266,9 +494,27 @@
       "sum_eat_again": 750,
       "sum_order_again": 800,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -287,9 +533,27 @@
       "sum_eat_again": 450,
       "sum_order_again": 400,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -308,9 +572,27 @@
       "sum_eat_again": 550,
       "sum_order_again": 500,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -329,9 +611,27 @@
       "sum_eat_again": 650,
       "sum_order_again": 675,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -350,9 +650,27 @@
       "sum_eat_again": 350,
       "sum_order_again": 300,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -371,9 +689,27 @@
       "sum_eat_again": 450,
       "sum_order_again": 400,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -392,9 +728,27 @@
       "sum_eat_again": 500,
       "sum_order_again": 525,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -413,9 +767,27 @@
       "sum_eat_again": 300,
       "sum_order_again": 250,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -434,9 +806,27 @@
       "sum_eat_again": 350,
       "sum_order_again": 300,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -455,9 +845,27 @@
       "sum_eat_again": 375,
       "sum_order_again": 400,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 3, "eat_again": 3, "order_again": 3}
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 3,
+          "eat_again": 3,
+          "order_again": 3
+        }
       ]
     }
   },
@@ -476,9 +884,27 @@
       "sum_eat_again": 225,
       "sum_order_again": 200,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -490,17 +916,47 @@
     "flavor": "It's just Ok",
     "service": "Good",
     "ratings": {
-      "total_reviews": 150,
-      "sum_taste": 300,
-      "sum_portion": 150,
-      "sum_service": 300,
-      "sum_eat_again": 275,
-      "sum_order_again": 250,
+      "total_reviews": 151,
+      "sum_taste": 302,
+      "sum_portion": 152,
+      "sum_service": 303,
+      "sum_eat_again": 277,
+      "sum_order_again": 252,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
-      ]
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 2,
+          "service": 3,
+          "eat_again": 2,
+          "order_again": 2
+        }
+      ],
+      "average_taste": 2,
+      "average_portion": 1.0066225165562914,
+      "average_service": 2.006622516556291,
+      "average_eat_again": 1.8344370860927153,
+      "average_order_again": 1.6688741721854305
     }
   },
   {
@@ -511,17 +967,47 @@
     "flavor": "Yummy Delicious",
     "service": "Good",
     "ratings": {
-      "total_reviews": 100,
-      "sum_taste": 300,
-      "sum_portion": 300,
-      "sum_service": 200,
-      "sum_eat_again": 250,
-      "sum_order_again": 275,
+      "total_reviews": 101,
+      "sum_taste": 302,
+      "sum_portion": 302,
+      "sum_service": 202,
+      "sum_eat_again": 252,
+      "sum_order_again": 277,
       "samples": [
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 3, "portion": 3, "service": 2, "eat_again": 3, "order_again": 3}
-      ]
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 3,
+          "portion": 3,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 3
+        },
+        {
+          "taste": 2,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        }
+      ],
+      "average_taste": 2.99009900990099,
+      "average_portion": 2.99009900990099,
+      "average_service": 2,
+      "average_eat_again": 2.495049504950495,
+      "average_order_again": 2.742574257425743
     }
   },
   {
@@ -539,9 +1025,27 @@
       "sum_eat_again": 150,
       "sum_order_again": 125,
       "samples": [
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 2, "order_again": 1},
-        {"taste": 1, "portion": 2, "service": 2, "eat_again": 1, "order_again": 2}
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 1
+        },
+        {
+          "taste": 1,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 2
+        }
       ]
     }
   },
@@ -560,9 +1064,27 @@
       "sum_eat_again": 175,
       "sum_order_again": 150,
       "samples": [
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 2, "order_again": 2},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 1, "order_again": 1},
-        {"taste": 2, "portion": 1, "service": 2, "eat_again": 3, "order_again": 2}
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 1,
+          "order_again": 1
+        },
+        {
+          "taste": 2,
+          "portion": 1,
+          "service": 2,
+          "eat_again": 3,
+          "order_again": 2
+        }
       ]
     }
   }

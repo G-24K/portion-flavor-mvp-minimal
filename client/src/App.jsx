@@ -19,6 +19,7 @@ function App() {
   const [flavorFilter, setFlavorFilter] = useState(''); // State for flavor filter
   const [serviceFilter, setServiceFilter] = useState(''); // State for service filter
   const [sortByRating, setSortByRating] = useState(false); // State for rating sort toggle
+  const [showRatingForm, setShowRatingForm] = useState(false); // State to toggle between details and rating form
 
   // Fetch restaurants on component mount
   useEffect(() => {
@@ -125,7 +126,10 @@ function App() {
       })
       .then(() => {
         setThankYouMessage(true);
-        setTimeout(() => setThankYouMessage(false), 3000); // Show thank you for 3 seconds
+        setTimeout(() => {
+          setThankYouMessage(false);
+          setShowRatingForm(false); // Return to restaurant details after submission
+        }, 3000); // Show thank you for 3 seconds
         // Refresh restaurant data
         fetch('https://glorious-space-waddle-7v76jrwjgpp93rjq5-3000.app.github.dev/restaurants')
           .then(res => res.json())
@@ -220,10 +224,15 @@ function App() {
               </select>
             </label>
           </div>
+          {/* Version 1: Spaced Out Portion, Flavor, Service */}
           <ul className="restaurant-list">
             {filteredRestaurants.map((r, i) => (
-              <li key={i} onClick={() => setSelectedRestaurant(r)} style={{ cursor: 'pointer' }}>
-                {r.name} - Rating: {getAverageRating(r.ratings).toFixed(1)}% ({r.ratings.total_reviews} reviews)
+              <li key={i} onClick={() => { setSelectedRestaurant(r); setShowRatingForm(false); }} style={{ cursor: 'pointer' }}>
+                {r.name}
+                <br />
+                <br />
+                Rating: {getAverageRating(r.ratings).toFixed(1)}% ({r.ratings.total_reviews} reviews)
+                <br />
                 <br />
                 Portion: <span className={`portion-value portion-${r.portion.toLowerCase().replace(/['\s]/g, '-')}`}>{r.portion}</span>,
                 Flavor: <span className={`flavor-value flavor-${r.flavor.toLowerCase().replace(/['\s]/g, '-')}`}>{r.flavor}</span>,
@@ -231,73 +240,111 @@ function App() {
               </li>
             ))}
           </ul>
+
+          {/* Version 2: Rating on Left, Portion/Flavor/Service Stacked on Right (commented out) */}
+          {/*
+          <ul className="restaurant-list">
+            {filteredRestaurants.map((r, i) => (
+              <li key={i} onClick={() => { setSelectedRestaurant(r); setShowRatingForm(false); }} style={{ cursor: 'pointer' }}>
+                <div className="restaurant-item">
+                  <div className="rating-section">
+                    {r.name}
+                    <br />
+                    Rating: {getAverageRating(r.ratings).toFixed(1)}% ({r.ratings.total_reviews} reviews)
+                  </div>
+                  <div className="details-section">
+                    <div>
+                      Portion: <span className={`portion-value portion-${r.portion.toLowerCase().replace(/['\s]/g, '-')}`}>{r.portion}</span>
+                    </div>
+                    <div>
+                      Flavor: <span className={`flavor-value flavor-${r.flavor.toLowerCase().replace(/['\s]/g, '-')}`}>{r.flavor}</span>
+                    </div>
+                    <div>
+                      Service: <span className={`service-value service-${r.service.toLowerCase().replace(/['\s]/g, '-')}`}>{r.service}</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+          */}
+
           {selectedRestaurant && (
             <div className="restaurant-details">
-              <h2>{selectedRestaurant.name}</h2>
-              <p>Address: {selectedRestaurant.address}</p>
-              <button onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRestaurant.address)}`, '_blank')}>
-                Directions to this place
-              </button>
-              <div className="rating-details">
-                <h3>Average Ratings</h3>
-                <p>Taste: {mapTasteToCategory(selectedRestaurant.ratings.sum_taste / selectedRestaurant.ratings.total_reviews)}</p>
-                <p>Portion: {mapPortionToCategory(selectedRestaurant.ratings.sum_portion / selectedRestaurant.ratings.total_reviews)}</p>
-                <p>Service: {mapServiceToCategory(selectedRestaurant.ratings.sum_service / selectedRestaurant.ratings.total_reviews)}</p>
-                <p>Eat there again?: {mapEatAgainToCategory(selectedRestaurant.ratings.sum_eat_again / selectedRestaurant.ratings.total_reviews)}</p>
-                <p>Order that dish again?: {mapOrderAgainToCategory(selectedRestaurant.ratings.sum_order_again / selectedRestaurant.ratings.total_reviews)}</p>
-              </div>
-              <div className="rating-form">
-                <h3>Leave a Rating</h3>
-                <label>
-                  Taste:
-                  <select value={ratingTaste} onChange={(e) => setRatingTaste(e.target.value)}>
-                    <option value="0">Select</option>
-                    <option value="1">EWWW Disgusting</option>
-                    <option value="2">It's just Ok</option>
-                    <option value="3">Yummy Delicious</option>
-                  </select>
-                </label>
-                <label>
-                  Portion:
-                  <select value={ratingPortion} onChange={(e) => setRatingPortion(e.target.value)}>
-                    <option value="0">Select</option>
-                    <option value="1">Stingy</option>
-                    <option value="2">Fair</option>
-                    <option value="3">Generous</option>
-                  </select>
-                </label>
-                <label>
-                  Service:
-                  <select value={ratingService} onChange={(e) => setRatingService(e.target.value)}>
-                    <option value="0">Select</option>
-                    <option value="1">Terrible</option>
-                    <option value="2">Good</option>
-                    <option value="3">Exceptional</option>
-                  </select>
-                </label>
-                <label>
-                  Eat there again?:
-                  <select value={ratingEatAgain} onChange={(e) => setRatingEatAgain(e.target.value)}>
-                    <option value="0">Select</option>
-                    <option value="1">No</option>
-                    <option value="2">Maybe</option>
-                    <option value="3">Yes</option>
-                  </select>
-                </label>
-                <label>
-                  Order that dish again?:
-                  <select value={ratingOrderAgain} onChange={(e) => setRatingOrderAgain(e.target.value)}>
-                    <option value="0">Select</option>
-                    <option value="1">No</option>
-                    <option value="2">Maybe</option>
-                    <option value="3">Yes</option>
-                  </select>
-                </label>
-                <button onClick={submitRating}>
-                  Submit Rating
-                </button>
-              </div>
-              {thankYouMessage && <p>Thank you for helping everyone!</p>}
+              {showRatingForm ? (
+                // Rating Form Section
+                <>
+                  <h2>Rate {selectedRestaurant.name}</h2>
+                  <div className="rating-form">
+                    <label>
+                      Taste:
+                      <select value={ratingTaste} onChange={(e) => setRatingTaste(e.target.value)}>
+                        <option value="0">Select</option>
+                        <option value="1">EWWW Disgusting</option>
+                        <option value="2">It's just Ok</option>
+                        <option value="3">Yummy Delicious</option>
+                      </select>
+                    </label>
+                    <label>
+                      Portion:
+                      <select value={ratingPortion} onChange={(e) => setRatingPortion(e.target.value)}>
+                        <option value="0">Select</option>
+                        <option value="1">Stingy</option>
+                        <option value="2">Fair</option>
+                        <option value="3">Generous</option>
+                      </select>
+                    </label>
+                    <label>
+                      Service:
+                      <select value={ratingService} onChange={(e) => setRatingService(e.target.value)}>
+                        <option value="0">Select</option>
+                        <option value="1">Terrible</option>
+                        <option value="2">Good</option>
+                        <option value="3">Exceptional</option>
+                      </select>
+                    </label>
+                    <label>
+                      Eat there again?:
+                      <select value={ratingEatAgain} onChange={(e) => setRatingEatAgain(e.target.value)}>
+                        <option value="0">Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Maybe</option>
+                        <option value="3">Yes</option>
+                      </select>
+                    </label>
+                    <label>
+                      Order that dish again?:
+                      <select value={ratingOrderAgain} onChange={(e) => setRatingOrderAgain(e.target.value)}>
+                        <option value="0">Select</option>
+                        <option value="1">No</option>
+                        <option value="2">Maybe</option>
+                        <option value="3">Yes</option>
+                      </select>
+                    </label>
+                    <button onClick={submitRating}>Submit Rating</button>
+                    <button onClick={() => setShowRatingForm(false)}>Back to Details</button>
+                  </div>
+                  {thankYouMessage && <p>Thank you for helping everyone!</p>}
+                </>
+              ) : (
+                // Restaurant Details Section
+                <>
+                  <h2>{selectedRestaurant.name}</h2>
+                  <p>Address: {selectedRestaurant.address}</p>
+                  <button onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRestaurant.address)}`, '_blank')}>
+                    Directions to this place
+                  </button>
+                  <div className="rating-details">
+                    <h3>Average Ratings</h3>
+                    <p>Taste: {mapTasteToCategory(selectedRestaurant.ratings.sum_taste / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Portion: {mapPortionToCategory(selectedRestaurant.ratings.sum_portion / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Service: {mapServiceToCategory(selectedRestaurant.ratings.sum_service / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Eat there again?: {mapEatAgainToCategory(selectedRestaurant.ratings.sum_eat_again / selectedRestaurant.ratings.total_reviews)}</p>
+                    <p>Order that dish again?: {mapOrderAgainToCategory(selectedRestaurant.ratings.sum_order_again / selectedRestaurant.ratings.total_reviews)}</p>
+                  </div>
+                  <button onClick={() => setShowRatingForm(true)}>Leave a Rating</button>
+                </>
+              )}
             </div>
           )}
         </>

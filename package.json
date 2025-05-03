@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "description": "A React app with Express backend to filter restaurants by portion size and flavor",
     "scripts": {
-      "start-backend": "cd server && npm start",
-      "start-frontend": "cd client && npm run dev",
-      "start-all": "npm run start-backend & npm run start-frontend",
-      "install-all": "cd client && npm install && cd ../server && npm install"
+        "start-backend": "cd server && npm start",
+        "start-frontend": "cd client && npm run dev",
+        "start-all": "npm run start-backend & npm run start-frontend",
+        "install-all": "cd client && npm install && cd ../server && npm install"
     },
     "keywords": [],
     "author": "",
     "license": "ISC"
-  }
+}
