@@ -9,3 +9,5 @@ A simple app to filter restaurants by portion size and flavor, built with React 
 
 ## Running the code
 npm run start-all
+
+Make sure the ports for 3000 and 3001 are set to public then reload the link for better app visibality. 
