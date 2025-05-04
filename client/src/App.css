@@ -30,13 +30,12 @@ h1 {
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 200px;
-  color: #ffffff; /* Dark blue text color for the search bar */
+  color: #ffffff;
 }
 
-/* Placeholder text for visibility */
 .controls input::placeholder {
-  color: #666; /* Placeholder text color */
-  opacity: 1; /* Ensures placeholder is fully visible */
+  color: #666;
+  opacity: 1;
 }
 
 .controls button {
@@ -92,18 +91,16 @@ select {
   cursor: pointer;
 }
 
-/* Version 1: Spacing for Portion, Flavor, Service */
 .portion-value,
 .flavor-value,
 .service-value {
-  margin-right: 20px; /* Adds horizontal spacing between the labels */
+  margin-right: 20px;
 }
 
 .service-value {
-  margin-right: 0; /* Removes margin from the last item (Service) */
+  margin-right: 0;
 }
 
-/* Version 2: Stacked Layout */
 .restaurant-item {
   display: flex;
   justify-content: space-between;
@@ -124,14 +121,12 @@ select {
   gap: 5px;
 }
 
-/* Remove the horizontal margin since they’re now stacked vertically */
 .portion-value,
 .flavor-value,
 .service-value {
-  margin-right: 0; /* Reset the margin-right from the first version */
+  margin-right: 0;
 }
 
-/* Portion value colors */
 .restaurant-list .portion-value.portion-stingy {
   color: #ffffff;
   font-weight: bold;
@@ -147,8 +142,7 @@ select {
   font-weight: bold;
 }
 
-/* Flavor value colors */
-.restaurant-list li .flavor-value.flavor-ewww-disgusting {
+.restaurant-list li .flavor-value.flavor-not-so-good {
   color: #ffffff;
   font-weight: bold;
 }
@@ -163,7 +157,6 @@ select {
   font-weight: bold;
 }
 
-/* Service value colors */
 .restaurant-list .service-value.service-terrible {
   color: #ffffff;
   font-weight: bold;
@@ -182,9 +175,10 @@ select {
 .restaurant-details {
   margin-top: 20px;
   padding: 20px;
-  background-color: #070718;
+  background-color: #03001f;
   border-radius: 5px;
   border: 1px solid #ddd;
+  display: block;
 }
 
 .rating-details {
@@ -197,54 +191,57 @@ select {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  width: 100%;
 }
 
 .rating-form label {
   display: flex;
   gap: 10px;
   align-items: center;
+  width: 100%;
+  max-width: 400px;
+  justify-content: space-between;
 }
 
-/* Style for buttons in the restaurant-details section */
+.rating-form select {
+  flex: 1;
+  min-width: 150px;
+}
+
 .restaurant-details button {
-  padding: 5px 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #ff2929; 
-  color: #ffffff; /* White text for contrast */
-  cursor: pointer;
-}
-
-/* Adjust button spacing in the rating form */
-.rating-form button {
-  margin-top: 10px;
-}
-
-/* ... (keep existing CSS) ... */
-
-/* Style for the back button to add spacing and hide when not in details view */
-.back-button {
-  margin-top: 10px; /* Add vertical spacing from the previous button */
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #ff2929;
   color: #ffffff;
   cursor: pointer;
+  min-width: 120px;
 }
 
-/* Ensure restaurant-details is hidden when empty or not in use */
-.restaurant-details {
+.rating-form button {
+  margin-top: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
-  padding: 20px;
-  background-color: #03001f;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  display: block; /* Default display to ensure it renders when shown */
+  gap: 20px;
+  width: 100%;
 }
 
-/* Hide if empty or no content is rendered */
+.back-button {
+  margin-top: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #ff2929;
+  color: #ffffff;
+  cursor: pointer;
+  min-width: 120px;
+}
+
 .restaurant-details:empty {
   display: none;
 }
@@ -276,7 +273,25 @@ select {
     margin-top: 10px;
   }
 
-  .back-button {
-    margin-top: 10px; /* Maintain spacing on mobile */
+  .rating-form label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .rating-form select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-button,
+  .restaurant-details button {
+    width: 100%;
+    min-width: unset;
   }
 }

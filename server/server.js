@@ -24,10 +24,10 @@ const saveRestaurants = () => {
 
 // Function to update averages after adding a new rating
 const updateAverages = (restaurant) => {
-  const { total_reviews, sum_taste, sum_portion, sum_service, sum_eat_again, sum_order_again } = restaurant.ratings;
+  const { total_reviews, sum_flavor, sum_portion, sum_service, sum_eat_again, sum_order_again } = restaurant.ratings;
   if (total_reviews === 0) return;
 
-  restaurant.ratings.average_taste = sum_taste / total_reviews;
+  restaurant.ratings.average_flavor = sum_flavor / total_reviews;
   restaurant.ratings.average_portion = sum_portion / total_reviews;
   restaurant.ratings.average_service = sum_service / total_reviews;
   restaurant.ratings.average_eat_again = sum_eat_again / total_reviews;
@@ -42,11 +42,11 @@ app.get('/restaurants', (req, res) => {
 // POST /restaurants/:id/ratings - Submit a new rating
 app.post('/restaurants/:id/ratings', (req, res) => {
   const id = parseInt(req.params.id, 10);
-  const { taste, portion, service, eat_again, order_again } = req.body;
+  const { flavor, portion, service, eat_again, order_again } = req.body;
 
   // Validate input (1-3 scale for all ratings)
-  if (!taste || !portion || !service || !eat_again || !order_again ||
-      taste < 1 || taste > 3 || portion < 1 || portion > 3 || service < 1 || service > 3 ||
+  if (!flavor || !portion || !service || !eat_again || !order_again ||
+      flavor < 1 || flavor > 3 || portion < 1 || portion > 3 || service < 1 || service > 3 ||
       eat_again < 1 || eat_again > 3 || order_again < 1 || order_again > 3) {
     return res.status(400).json({ error: 'Invalid rating values, must be 1-3' });
   }
@@ -58,7 +58,7 @@ app.post('/restaurants/:id/ratings', (req, res) => {
 
   // Update sums and total_reviews
   restaurant.ratings.total_reviews += 1;
-  restaurant.ratings.sum_taste += taste;
+  restaurant.ratings.sum_flavor += flavor;
   restaurant.ratings.sum_portion += portion;
   restaurant.ratings.sum_service += service;
   restaurant.ratings.sum_eat_again += eat_again;
@@ -68,7 +68,7 @@ app.post('/restaurants/:id/ratings', (req, res) => {
   if (restaurant.ratings.samples.length >= 5) {
     restaurant.ratings.samples.shift(); // Remove oldest sample
   }
-  restaurant.ratings.samples.push({ taste, portion, service, eat_again, order_again });
+  restaurant.ratings.samples.push({ flavor, portion, service, eat_again, order_again });
 
   updateAverages(restaurant); // Recalculate averages
   saveRestaurants(); // Save updated data to file

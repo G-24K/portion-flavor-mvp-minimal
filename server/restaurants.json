@@ -1,53 +1,53 @@
 [
   {
     "id": 1,
-    "name": "Nobu Malibu",
-    "address": "22706 Pacific Coast Hwy, Malibu, CA 90265",
+    "name": "Nobu Los Angeles",
+    "address": "903 N La Cienega Blvd, Los Angeles, CA 90069",
     "portion": "Stingy",
-    "flavor": "It's just Ok",
+    "flavor": "Yummy Delicious",
     "service": "Exceptional",
     "ratings": {
-      "total_reviews": 1001,
-      "sum_taste": 1003,
-      "sum_portion": 3001,
-      "sum_service": 2803,
+      "total_reviews": 1000,
+      "sum_flavor": 2600,
+      "sum_portion": 1500,
+      "sum_service": 2600,
       "sum_eat_again": 2003,
       "sum_order_again": 1802,
       "samples": [
         {
-          "taste": 1,
-          "portion": 3,
+          "flavor": 3,
+          "portion": 1,
           "service": 3,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 1,
-          "portion": 3,
+          "flavor": 3,
+          "portion": 1,
           "service": 3,
           "eat_again": 3,
           "order_again": 1
         },
         {
-          "taste": 1,
-          "portion": 3,
+          "flavor": 2,
+          "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 1,
           "service": 3,
           "eat_again": 3,
           "order_again": 2
         }
       ],
-      "average_taste": 1.001998001998002,
-      "average_portion": 2.998001998001998,
-      "average_service": 2.8001998001998003,
-      "average_eat_again": 2.000999000999001,
-      "average_order_again": 1.8001998001998003
+      "average_flavor": 2.6,
+      "average_portion": 1.5,
+      "average_service": 2.6,
+      "average_eat_again": 2.003,
+      "average_order_again": 1.802
     }
   },
   {
@@ -58,47 +58,54 @@
     "flavor": "It's just Ok",
     "service": "Good",
     "ratings": {
-      "total_reviews": 901,
-      "sum_taste": 1802,
-      "sum_portion": 1802,
-      "sum_service": 1802,
-      "sum_eat_again": 1902,
-      "sum_order_again": 1702,
+      "total_reviews": 902,
+      "sum_flavor": 1804,
+      "sum_portion": 1804,
+      "sum_service": 1804,
+      "sum_eat_again": 1904,
+      "sum_order_again": 1704,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 2,
           "service": 2,
           "eat_again": 3,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
+          "portion": 2,
+          "service": 2,
+          "eat_again": 2,
+          "order_again": 2
+        },
+        {
+          "flavor": 2,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         }
       ],
-      "average_taste": 2,
+      "average_flavor": 2,
       "average_portion": 2,
       "average_service": 2,
-      "average_eat_again": 2.1109877913429522,
-      "average_order_again": 1.8890122086570478
+      "average_eat_again": 2.1108647450110865,
+      "average_order_again": 1.8891352549889135
     }
   },
   {
@@ -110,28 +117,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 850,
-      "sum_taste": 2550,
+      "sum_flavor": 2550,
       "sum_portion": 850,
       "sum_service": 1700,
       "sum_eat_again": 2000,
       "sum_order_again": 2100,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
@@ -149,28 +156,28 @@
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 800,
-      "sum_taste": 2400,
+      "sum_flavor": 2400,
       "sum_portion": 2400,
       "sum_service": 2300,
       "sum_eat_again": 2000,
       "sum_order_again": 2100,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 3,
@@ -184,32 +191,32 @@
     "name": "Sugarfish",
     "address": "600 W 7th St, Los Angeles, CA 90017",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Good",
     "ratings": {
       "total_reviews": 800,
-      "sum_taste": 800,
+      "sum_flavor": 800,
       "sum_portion": 1600,
       "sum_service": 1600,
       "sum_eat_again": 1200,
       "sum_order_again": 1100,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -227,28 +234,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 600,
-      "sum_taste": 1200,
+      "sum_flavor": 1200,
       "sum_portion": 600,
       "sum_service": 1200,
       "sum_eat_again": 1100,
       "sum_order_again": 1000,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
@@ -266,28 +273,28 @@
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 500,
-      "sum_taste": 1500,
+      "sum_flavor": 1500,
       "sum_portion": 1500,
       "sum_service": 1400,
       "sum_eat_again": 1300,
       "sum_order_again": 1350,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
@@ -301,32 +308,32 @@
     "name": "Cut by Wolfgang Puck",
     "address": "9500 Wilshire Blvd, Beverly Hills, CA 90212",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 450,
-      "sum_taste": 450,
+      "sum_flavor": 450,
       "sum_portion": 900,
       "sum_service": 1250,
       "sum_eat_again": 700,
       "sum_order_again": 650,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 3,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 3,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -344,28 +351,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 400,
-      "sum_taste": 800,
+      "sum_flavor": 800,
       "sum_portion": 400,
       "sum_service": 800,
       "sum_eat_again": 750,
       "sum_order_again": 700,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
@@ -383,28 +390,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 400,
-      "sum_taste": 1200,
+      "sum_flavor": 1200,
       "sum_portion": 1200,
       "sum_service": 800,
       "sum_eat_again": 1000,
       "sum_order_again": 1050,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 3,
@@ -418,32 +425,32 @@
     "name": "Providence",
     "address": "5955 Melrose Ave, Los Angeles, CA 90038",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 350,
-      "sum_taste": 350,
+      "sum_flavor": 350,
       "sum_portion": 700,
       "sum_service": 950,
       "sum_eat_again": 550,
       "sum_order_again": 500,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 3,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 3,
           "eat_again": 2,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -461,28 +468,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 350,
-      "sum_taste": 700,
+      "sum_flavor": 700,
       "sum_portion": 350,
       "sum_service": 700,
       "sum_eat_again": 650,
       "sum_order_again": 600,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
@@ -500,28 +507,28 @@
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 300,
-      "sum_taste": 900,
+      "sum_flavor": 900,
       "sum_portion": 900,
       "sum_service": 850,
       "sum_eat_again": 750,
       "sum_order_again": 800,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 3,
@@ -535,32 +542,32 @@
     "name": "Din Tai Fung",
     "address": "1108 S Baldwin Ave, Arcadia, CA 91007",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Good",
     "ratings": {
       "total_reviews": 300,
-      "sum_taste": 300,
+      "sum_flavor": 300,
       "sum_portion": 600,
       "sum_service": 600,
       "sum_eat_again": 450,
       "sum_order_again": 400,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -578,28 +585,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 300,
-      "sum_taste": 600,
+      "sum_flavor": 600,
       "sum_portion": 300,
       "sum_service": 600,
       "sum_eat_again": 550,
       "sum_order_again": 500,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
@@ -617,28 +624,28 @@
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 250,
-      "sum_taste": 750,
+      "sum_flavor": 750,
       "sum_portion": 750,
       "sum_service": 700,
       "sum_eat_again": 650,
       "sum_order_again": 675,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
@@ -652,32 +659,32 @@
     "name": "Cafe Gratitude",
     "address": "639 N Larchmont Blvd, Los Angeles, CA 90004",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Good",
     "ratings": {
       "total_reviews": 250,
-      "sum_taste": 250,
+      "sum_flavor": 250,
       "sum_portion": 500,
       "sum_service": 500,
       "sum_eat_again": 350,
       "sum_order_again": 300,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -695,28 +702,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 250,
-      "sum_taste": 500,
+      "sum_flavor": 500,
       "sum_portion": 250,
       "sum_service": 500,
       "sum_eat_again": 450,
       "sum_order_again": 400,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
@@ -734,28 +741,28 @@
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 200,
-      "sum_taste": 600,
+      "sum_flavor": 600,
       "sum_portion": 600,
       "sum_service": 550,
       "sum_eat_again": 500,
       "sum_order_again": 525,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
@@ -769,32 +776,32 @@
     "name": "Holbox",
     "address": "3655 S Grand Ave, Los Angeles, CA 90007",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Good",
     "ratings": {
       "total_reviews": 200,
-      "sum_taste": 200,
+      "sum_flavor": 200,
       "sum_portion": 400,
       "sum_service": 400,
       "sum_eat_again": 300,
       "sum_order_again": 250,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -812,28 +819,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 200,
-      "sum_taste": 400,
+      "sum_flavor": 400,
       "sum_portion": 200,
       "sum_service": 400,
       "sum_eat_again": 350,
       "sum_order_again": 300,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
@@ -851,28 +858,28 @@
     "service": "Exceptional",
     "ratings": {
       "total_reviews": 150,
-      "sum_taste": 450,
+      "sum_flavor": 450,
       "sum_portion": 450,
       "sum_service": 400,
       "sum_eat_again": 375,
       "sum_order_again": 400,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 3,
           "eat_again": 3,
@@ -886,32 +893,32 @@
     "name": "Bestia",
     "address": "2121 E 7th Pl, Los Angeles, CA 90021",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Good",
     "ratings": {
       "total_reviews": 150,
-      "sum_taste": 150,
+      "sum_flavor": 150,
       "sum_portion": 300,
       "sum_service": 300,
       "sum_eat_again": 225,
       "sum_order_again": 200,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -929,42 +936,42 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 151,
-      "sum_taste": 302,
+      "sum_flavor": 302,
       "sum_portion": 152,
       "sum_service": 303,
       "sum_eat_again": 277,
       "sum_order_again": 252,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 2,
           "service": 3,
           "eat_again": 2,
           "order_again": 2
         }
       ],
-      "average_taste": 2,
+      "average_flavor": 2,
       "average_portion": 1.0066225165562914,
       "average_service": 2.006622516556291,
       "average_eat_again": 1.8344370860927153,
@@ -980,42 +987,42 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 101,
-      "sum_taste": 302,
+      "sum_flavor": 302,
       "sum_portion": 302,
       "sum_service": 202,
       "sum_eat_again": 252,
       "sum_order_again": 277,
       "samples": [
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 3,
+          "flavor": 3,
           "portion": 3,
           "service": 2,
           "eat_again": 3,
           "order_again": 3
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         }
       ],
-      "average_taste": 2.99009900990099,
+      "average_flavor": 2.99009900990099,
       "average_portion": 2.99009900990099,
       "average_service": 2,
       "average_eat_again": 2.495049504950495,
@@ -1027,32 +1034,32 @@
     "name": "Sushi Gen",
     "address": "422 E 2nd St, Los Angeles, CA 90012",
     "portion": "Fair",
-    "flavor": "EWWW Disgusting",
+    "flavor": "Not so Good",
     "service": "Good",
     "ratings": {
       "total_reviews": 100,
-      "sum_taste": 100,
+      "sum_flavor": 100,
       "sum_portion": 200,
       "sum_service": 200,
       "sum_eat_again": 150,
       "sum_order_again": 125,
       "samples": [
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 2,
           "order_again": 1
         },
         {
-          "taste": 1,
+          "flavor": 1,
           "portion": 2,
           "service": 2,
           "eat_again": 1,
@@ -1070,28 +1077,28 @@
     "service": "Good",
     "ratings": {
       "total_reviews": 100,
-      "sum_taste": 200,
+      "sum_flavor": 200,
       "sum_portion": 100,
       "sum_service": 200,
       "sum_eat_again": 175,
       "sum_order_again": 150,
       "samples": [
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 2,
           "order_again": 2
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 1,
           "order_again": 1
         },
         {
-          "taste": 2,
+          "flavor": 2,
           "portion": 1,
           "service": 2,
           "eat_again": 3,
