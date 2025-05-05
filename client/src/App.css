@@ -1,3 +1,4 @@
+/* Main container styles */
 .App {
   max-width: 800px;
   width: 100%;
@@ -7,17 +8,20 @@
   text-align: center;
 }
 
+/* Loading message styles */
 .loading {
   font-size: 1.2em;
   color: #666;
   margin: 20px 0;
 }
 
+/* Main heading styles */
 h1 {
   color: #09043b;
   margin-bottom: 20px;
 }
 
+/* Search and sort controls */
 .controls {
   display: flex;
   justify-content: center;
@@ -46,6 +50,7 @@ h1 {
   cursor: pointer;
 }
 
+/* Filter dropdowns for portion, flavor, and service */
 .filters {
   display: flex;
   justify-content: center;
@@ -76,6 +81,7 @@ select {
   border: 1px solid #ccc;
 }
 
+/* Restaurant list styles */
 .restaurant-list {
   list-style: none;
   padding: 0;
@@ -91,6 +97,7 @@ select {
   cursor: pointer;
 }
 
+/* Styles for rating categories (portion, flavor, service) */
 .portion-value,
 .flavor-value,
 .service-value {
@@ -101,6 +108,7 @@ select {
   margin-right: 0;
 }
 
+/* Individual restaurant item layout */
 .restaurant-item {
   display: flex;
   justify-content: space-between;
@@ -121,12 +129,14 @@ select {
   gap: 5px;
 }
 
+/* Reset margin for category values */
 .portion-value,
 .flavor-value,
 .service-value {
   margin-right: 0;
 }
 
+/* Portion category styles */
 .restaurant-list .portion-value.portion-stingy {
   color: #ffffff;
   font-weight: bold;
@@ -142,6 +152,7 @@ select {
   font-weight: bold;
 }
 
+/* Flavor category styles */
 .restaurant-list li .flavor-value.flavor-not-so-good {
   color: #ffffff;
   font-weight: bold;
@@ -157,6 +168,7 @@ select {
   font-weight: bold;
 }
 
+/* Service category styles */
 .restaurant-list .service-value.service-terrible {
   color: #ffffff;
   font-weight: bold;
@@ -172,6 +184,7 @@ select {
   font-weight: bold;
 }
 
+/* Restaurant details view styles */
 .restaurant-details {
   margin-top: 20px;
   padding: 20px;
@@ -185,6 +198,7 @@ select {
   margin-top: 20px;
 }
 
+/* Rating form styles */
 .rating-form {
   margin-top: 20px;
   display: flex;
@@ -208,6 +222,7 @@ select {
   min-width: 150px;
 }
 
+/* Button styles in details and rating form */
 .restaurant-details button {
   padding: 5px 10px;
   border-radius: 5px;
@@ -222,6 +237,7 @@ select {
   margin-top: 0;
 }
 
+/* Container for navigation buttons */
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -242,10 +258,12 @@ select {
   min-width: 120px;
 }
 
+/* Hide empty restaurant details container */
 .restaurant-details:empty {
   display: none;
 }
 
+/* Responsive styles for mobile devices */
 @media (max-width: 600px) {
   .App {
     padding: 10px;
